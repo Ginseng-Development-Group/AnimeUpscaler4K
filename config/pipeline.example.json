@@ -1,0 +1,57 @@
+{
+  "settings": {
+    "input_dir": "/input",
+    "output_dir": "/output",
+    "temp_dir": "/workspace/tmp",
+    "log_file": "/workspace/batch_movies.log",
+    "gpus": [0, 1],
+    "chunk_size": 14385,
+    "scale": 2,
+    "noise": -1,
+    "model": "models-pro",
+    "threads": "2:2:2",
+    "video_encoder": "hevc_nvenc",
+    "preset": "p7",
+    "cq": 16,
+    "min_output_size_mb": 500,
+    "cleanup_segments_on_success": true
+  },
+  "items": [
+    {
+      "id": "nausicaa",
+      "title": "Nausicaä del Valle del Viento (1984)",
+      "filename": "[AnimeOut] Kaze no Tani no Nausica v2 2014 JPBD Remux[1080pp][hydes][RapidBot].mkv",
+      "output_name": "Nausicaa del Valle del Viento (1984) [2160p 4K HEVC Dual-Audio].mkv",
+      "gpu": 0,
+      "video_language": "jpn",
+      "video_track_name": "4K HEVC 10-bit (Real-CUGAN Pro)",
+      "track_overrides": [
+        { "track_id": 1, "language": "jpn", "name": "Japonés (Audio Original 2.0)" },
+        { "track_id": 2, "language": "eng", "name": "Inglés (Doblaje Disney 2005)" },
+        { "track_id": 3, "language": "eng", "name": "Inglés (Doblaje UKBD)" },
+        { "track_id": 4, "language": "jpn", "name": "Comentarios (Hideaki Anno & Kazuyoshi Katayama)" },
+        { "track_id": 5, "language": "eng", "name": "Carteles y Canciones (Signs)" },
+        { "track_id": 6, "language": "eng", "name": "Subtítulos Completos (Inglés)" },
+        { "track_id": 7, "language": "eng", "name": "Comentarios (GKIDS)" },
+        { "track_id": 8, "language": "eng", "name": "Comentarios (UKBD)" }
+      ]
+    },
+    {
+      "id": "mononoke",
+      "title": "La Princesa Mononoke (1997)",
+      "filename": "[AnimeOut] Princess Mononoke [0CDD16E6][Arid][RapidBot].mkv",
+      "output_name": "La Princesa Mononoke (1997) [2160p 4K HEVC Dual-Audio].mkv",
+      "gpu": 1,
+      "video_language": "jpn",
+      "video_track_name": "4K HEVC 10-bit (Real-CUGAN Pro)",
+      "track_overrides": [
+        { "track_id": 1, "language": "jpn", "name": "Japonés (Audio Original)" },
+        { "track_id": 2, "language": "eng", "name": "Inglés (Doblaje)" },
+        { "track_id": 3, "language": "eng", "name": "Subtítulos Completos [THORA]" },
+        { "track_id": 4, "language": "eng", "name": "Subtítulos Completos [REVO/niizk]" },
+        { "track_id": 5, "language": "eng", "name": "Carteles y Canciones [THORA]" },
+        { "track_id": 6, "language": "eng", "name": "Carteles y Canciones [REVO/niizk]" }
+      ]
+    }
+  ]
+}

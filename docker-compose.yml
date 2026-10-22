@@ -1,0 +1,30 @@
+services:
+  anime-upscaler-4k:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: anime-upscaler-4k
+    restart: "no"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=all
+      - INPUT_DIR=/input
+      - OUTPUT_DIR=/output
+      - TEMP_DIR=/workspace/tmp
+      - LOG_FILE=/workspace/batch_upscale.log
+      - PIPELINE_CONFIG=/config/pipeline.json
+    volumes:
+      - ${HOST_INPUT_DIR:-./data/input}:/input:ro
+      - ${HOST_OUTPUT_DIR:-./data/output}:/output:rw
+      - ${HOST_WORKSPACE_DIR:-./data/workspace}:/workspace:rw
+      - ./config:/config:ro
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu, compute, video, graphics, utility]

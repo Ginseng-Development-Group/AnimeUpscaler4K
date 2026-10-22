@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.env
+config/pipeline.json
+data/
+workspace_tmp*/
+.segments/
+.staging/
+*.mkv
+*.mp4
+*.png
+*.jpg
+*.log
+realcugan-ncnn-vulkan-20220728-ubuntu/
+realesrgan-ncnn-vulkan
